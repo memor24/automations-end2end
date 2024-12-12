@@ -1,8 +1,7 @@
 ### Automating infrastructure provision and configuration:
-- VMware_Automation (vsphere+terraformansible)\
-- Monitoring_Automation (docker+grafana+prometheus && terraform+grafana+ansible+zabbix) \
+- VMware_Automation (terraform: vsphere ansible: grafana)\
+- Monitoring_Automation (terraform:vsphere ansible:grafana+zabbix) \
 - Jenkins_Automation (cicd pipeline as code e.g. for s3+cloudflare) \
-
-Test_Website(lemp) refer to myWebsite(frontend & backend) \
+- Website_ecom (lamp) multi node, with teraform (l-web server) and (l-db server), and ansible
 
 Good ref: https://www.youtube.com/watch?v=r0I4TTO957w&t=415s
