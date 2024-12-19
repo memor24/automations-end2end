@@ -1,0 +1,1 @@
+## some common automations with bash scripting

@@ -1,0 +1,2 @@
+# use ansible to install jenkins on the server
+# including java-8, java-14?, jenkins, groovy
