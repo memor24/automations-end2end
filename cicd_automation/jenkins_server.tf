@@ -1,1 +1,0 @@
-# // linux server as jenkins master
