@@ -1,2 +1,3 @@
 // write the entire pipeline in groovy. including
-// (user, environment,) plugins, stages
+// trigger/on git push, (user, environment,) plugins, stages
+// versioning + tagging
