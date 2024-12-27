@@ -1,14 +1,18 @@
 # use ansible to install jenkins on the server
 # including java-8, java-17, jenkins, groovy
+# run the Jenkinsfile (& groovy script)
 ---
 - hosts: localhost
   become: yes
   tasks:
+    - name: update apt
+      apt:
+        update_cache: yes
+
     - name: install Java jdk-17
       apt:
         name: openjdk-17-jdk
         state: present
-        # update_cache: yes
 
     - name: download Jenkins war file
       get_url:
@@ -22,7 +26,7 @@
 
     - name: create user
       user:
-        name: jenkins # devops
+        name: jenkins # or devops?
         groups: jenkins
         createhome: yes
         system: yes
@@ -34,7 +38,7 @@
         owner: jenkins
         group: jenkins
 
-- name: run Jenkins war file
+    - name: run Jenkins war file
       shell: |
         nohup java -jar /tmp/jenkins.war > /var/log/jenkins.log 2>&1 &
         # java -jar /tmp/jenkins.war --httpPort=8085 --httpListenAddress=0.0.0.0 --daemon 
@@ -45,3 +49,11 @@
         state: started
         enabled: yes
 
+    - name: install groovy
+      apt:
+        name: groovy
+        state: present
+
+    - name: run the jenkinsfile
+      shell: |
+        java -jar /usr/share/jenkins/cli/cli.jar -s http://localhost:8085/ execute -f ./Jenkinsfile

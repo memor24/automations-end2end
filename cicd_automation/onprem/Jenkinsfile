@@ -1,0 +1,45 @@
+// ci pipeline to deploy a basic web app code to Dev Env on push
+
+def grv 
+pipeline{
+    agent any 
+
+    stages {
+
+        stage ('ci'){
+            steps{
+                git branch:'main', url:'https://github.com/memor24/py-game.git'
+                script{
+                    grv = load "script.groovy"
+                }
+            }
+        }
+
+        stage ('build'){
+            steps{
+                script{
+                    grv.buildApp()
+                }
+                
+            }
+        }
+
+        stage('test'){
+            steps{
+                script{
+                    grv.testApp()
+                }
+            }
+
+        }
+
+        stage('deploy'){
+            steps{
+                script{
+                    grv.deployApp()
+                }
+            }
+        }
+
+    }
+} 

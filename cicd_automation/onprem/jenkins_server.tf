@@ -1,1 +1,2 @@
-# // linux server as jenkins master
+# // vbox linux server as jenkins master
+// 

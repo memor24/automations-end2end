@@ -1,3 +1,3 @@
-// # ecr+packer image
+// # packer image + ecr
 
-# ecs with autoscaling to use ecr repo
+# ecs with autoscaling to use the ecr repo
