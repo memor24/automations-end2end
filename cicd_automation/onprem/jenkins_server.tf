@@ -1,2 +1,2 @@
-# // vbox linux server as jenkins master
-// 
+// tbu
+// vbox linux ubuntu server as jenkins master
