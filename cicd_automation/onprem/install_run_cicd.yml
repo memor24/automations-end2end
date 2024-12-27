@@ -57,3 +57,10 @@
     - name: run the jenkinsfile
       shell: |
         java -jar /usr/share/jenkins/cli/cli.jar -s http://localhost:8085/ execute -f ./Jenkinsfile
+
+    - name: install python3
+      apt:
+        name:
+          - python3
+          - python3-pip
+        state: present    
