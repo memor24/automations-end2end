@@ -1,4 +1,4 @@
-## jenkins cicd as code
+## Jenkins CICD as code
 ### cloud
 create a ci pipeline to update s3 bucket of a static webpage on push \
 automate the entire pipeline in groovy code:
