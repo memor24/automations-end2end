@@ -1,1 +1,1 @@
-## some common automations with bash scripting
+## common linux automations with bash
