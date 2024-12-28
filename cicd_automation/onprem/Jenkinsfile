@@ -1,4 +1,4 @@
-// ci pipeline to deploy a python web app code to Dev Env on push
+// pipeline to deploy a python web app code to (Dev, test tbu, prod tbu) Env on push
 
 def grv 
 pipeline{
